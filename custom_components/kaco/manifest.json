@@ -1,0 +1,18 @@
+{
+  "domain": "kaco",
+  "name": "Kaco",
+  "version": "1.0.0",
+  "documentation": "https://github.com/home-assistant/brands/tree/master/custom_integrations/kaco",
+  "dependencies": [],
+  "codeowners": ["@RASBR"],
+  "iot_class": "local_polling",
+  "config_flow": true,
+  "requirements": ["aiohttp"],
+  "icon": "static/icon.png",
+  "dark_icon": "static/dark_icon.png",
+  "logo": "static/logo.png",
+  "dark_logo": "static/dark_logo.png"
+
+}
+
+
