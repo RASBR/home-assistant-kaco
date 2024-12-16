@@ -1,3 +1,7 @@
+<div style="color: red; font-weight: bold; text-transform: uppercase;">
+This is my first trial of HA integration, so the HACS install instructions below are not working or might not work!
+</div>
+
 <p align="center">
   <img src="custom_components/kaco/static/kaco_new_energy_1.png" alt="Kaco New Energy Logo" width="300"/>
 </p>
