@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="kaco/static/kaco_new_energy_1.png" alt="Kaco New Energy Logo" width="300"/>
+  <img src="custom_components/kaco/static/kaco_new_energy_1.png" alt="Kaco New Energy Logo" width="300"/>
 </p>
 
 # Kaco 3.7NX Inverter Integration for Home Assistant
@@ -83,13 +83,13 @@ A custom integration for [Home Assistant](https://www.home-assistant.io/) to rea
    - Follow the on-screen prompts to enter necessary details, including the MAC address if combining with other integrations.
    - Refer to the setup form for guidance:
 
-     ![Setup Form](kaco/static/ha_kaco_setup_form.png)
+     ![Setup Form](custom_components/kaco/static/ha_kaco_setup_form.png)
 
 4. **Finalize Setup**:
 
    - Once configured, the inverter device will appear in your devices list:
 
-     ![Device Page](kaco/static/ha_kaco_device_page.png)
+     ![Device Page](custom_components/kaco/static/ha_kaco_device_page.png)
 
 ## Usage
 
@@ -104,16 +104,16 @@ After successful installation and configuration, the integration will create var
 ### Main Logo
 
 <p align="center">
-  <img src="kaco/static/kaco_new_energy_1.png" alt="Kaco New Energy Logo" width="300"/>
+  <img src="custom_components/kaco/static/kaco_new_energy_1.png" alt="Kaco New Energy Logo" width="300"/>
 </p>
 
 ### Setup Form
 
-![Setup Form](kaco/static/ha_kaco_setup_form.png)
+![Setup Form](custom_components/kaco/static/ha_kaco_setup_form.png)
 
 ### Device Page
 
-![Device Page](kaco/static/ha_kaco_device_page.png)
+![Device Page](custom_components/kaco/static/ha_kaco_device_page.png)
 
 ## External Links
 
