@@ -1,6 +1,5 @@
-<div style="color: red; font-weight: bold; text-transform: uppercase;">
-This is my first trial of HA integration, so the HACS install instructions below are not working or might not work!
-</div>
+
+## This is my first trial of HA integration, so the HACS install instructions below are not working or might not work!
 
 <p align="center">
   <img src="custom_components/kaco/static/kaco_new_energy_1.png" alt="Kaco New Energy Logo" width="300"/>
@@ -8,9 +7,14 @@ This is my first trial of HA integration, so the HACS install instructions below
 
 # Kaco 3.7NX Inverter Integration for Home Assistant
 
-![License](https://img.shields.io/github/license/RASBR/kaco)
-![Stars](https://img.shields.io/github/stars/RASBR/kaco)
-![HACS Status](https://img.shields.io/badge/HACS-Default-orange.svg)
+![License](https://img.shields.io/github/license/RASBR/home-assistant-kaco)
+![Stars](https://img.shields.io/github/stars/RASBR/home-assistant-kaco)
+![Forks](https://img.shields.io/github/forks/RASBR/home-assistant-kaco)
+![Issues](https://img.shields.io/github/issues/RASBR/home-assistant-kaco)
+![Last Commit](https://img.shields.io/github/last-commit/RASBR/home-assistant-kaco)
+![Version](https://img.shields.io/github/v/release/RASBR/home-assistant-kaco)
+
+
 
 A custom integration for [Home Assistant](https://www.home-assistant.io/) to read and monitor data from Kaco 3.7NX inverters. This integration allows you to seamlessly integrate your Kaco inverter into your smart home setup, providing real-time insights and control.
 
