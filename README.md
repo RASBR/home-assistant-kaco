@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/Status-Work_in_progress-orange)
+![](https://img.shields.io/badge/Project_stage-Work_in_progress-orange)
 ## This is my first trial of HA integration, so the HACS install instructions below are not working or might not work!
 
 <p align="center">
