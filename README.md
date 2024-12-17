@@ -51,6 +51,7 @@ A custom integration for [Home Assistant](https://www.home-assistant.io/) to rea
 
 ## Installation
 
+![](https://img.shields.io/badge/IMPORTANT-Still_work_in_progress-cd1628)
 ### Installing via HACS
 
 1. **Ensure HACS is Installed**: If you haven't installed HACS yet, follow the [HACS installation guide](https://hacs.xyz/docs/installation/prerequisites).
