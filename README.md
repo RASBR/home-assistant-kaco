@@ -1,4 +1,4 @@
-
+![](https://img.shields.io/badge/Status-Work_in_progress-orange)
 ## This is my first trial of HA integration, so the HACS install instructions below are not working or might not work!
 
 <p align="center">
@@ -7,12 +7,14 @@
 
 # Kaco 3.7NX Inverter Integration for Home Assistant
 
+
 ![License](https://img.shields.io/github/license/RASBR/home-assistant-kaco)
 ![Stars](https://img.shields.io/github/stars/RASBR/home-assistant-kaco)
 ![Forks](https://img.shields.io/github/forks/RASBR/home-assistant-kaco)
 ![Issues](https://img.shields.io/github/issues/RASBR/home-assistant-kaco)
 ![Last Commit](https://img.shields.io/github/last-commit/RASBR/home-assistant-kaco)
 ![Version](https://img.shields.io/github/v/release/RASBR/home-assistant-kaco)
+
 
 
 
