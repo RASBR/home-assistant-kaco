@@ -1,4 +1,5 @@
 ![](https://img.shields.io/badge/Project_stage-Work_in_progress-orange)
+
 ## This is my first trial of HA integration, so the HACS install instructions below are not working or might not work!
 
 <p align="center">
@@ -7,7 +8,7 @@
 
 # Kaco 3.7NX Inverter Integration for Home Assistant
 
-
+[![Made with ChatGPT](https://img.shields.io/badge/Made%20with-ChatGPT-00ADEF?logo=openai&logoColor=white&style=flat)](https://openai.com/chatgpt)
 ![License](https://img.shields.io/github/license/RASBR/home-assistant-kaco)
 ![Stars](https://img.shields.io/github/stars/RASBR/home-assistant-kaco)
 ![Forks](https://img.shields.io/github/forks/RASBR/home-assistant-kaco)
@@ -15,29 +16,35 @@
 ![Last Commit](https://img.shields.io/github/last-commit/RASBR/home-assistant-kaco)
 ![Version](https://img.shields.io/github/v/release/RASBR/home-assistant-kaco)
 
-
-
-
 A custom integration for [Home Assistant](https://www.home-assistant.io/) to read and monitor data from Kaco 3.7NX inverters. This integration allows you to seamlessly integrate your Kaco inverter into your smart home setup, providing real-time insights and control.
+
+This integration was inspired by [Kolja Windeler's Kaco integeration](https://github.com/KoljaWindeler/kaco).
 
 ## Table of Contents
 
-- [Features](#features)
-- [Requirements](#requirements)
-- [Installation](#installation)
-  - [Installing via HACS](#installing-via-hacs)
-  - [Manual Installation](#manual-installation)
-- [Configuration](#configuration)
-  - [Setup Steps](#setup-steps)
-- [Usage](#usage)
-- [Screenshots](#screenshots)
-- [External Links](#external-links)
-- [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
-- [License](#license)
+- [Kaco 3.7NX Inverter Integration for Home Assistant](#kaco-37nx-inverter-integration-for-home-assistant)
+  - [Table of Contents](#table-of-contents)
+  - [Features:](#features)
+  - [Requirements](#requirements)
+  - [Installation](#installation)
+    - [Installing via HACS](#installing-via-hacs)
+    - [Manual Installation](#manual-installation)
+  - [Configuration](#configuration)
+    - [Setup Steps](#setup-steps)
+      - [Steps to Add the Integration](#steps-to-add-the-integration)
+  - [Usage](#usage)
+  - [Screenshots](#screenshots)
+    - [Main Logo](#main-logo)
+    - [Setup Form](#setup-form)
+    - [Device Page](#device-page)
+  - [External Links](#external-links)
+  - [Troubleshooting](#troubleshooting)
+  - [Contributing](#contributing)
 
-## Features
+## Features:
 
+- **Local network**: Doesn't require internet connection, all readings are made in the local network.
+- **Combined Device**: Uses the MAC address (if provided) for the device id, which enable Home Assistant to combine the device with other devices provided by other integrations using MAC address i.e. Router, in my case UDMPRO gateway.
 - **Real-Time Monitoring**: Track the performance and status of your Kaco 3.7NX inverter.
 - **Multiple Inverters Support**: Easily integrate and monitor multiple inverters.
 - **Network Integration**: Combine with other networked devices like Unifi Network for enhanced functionality.
@@ -52,6 +59,7 @@ A custom integration for [Home Assistant](https://www.home-assistant.io/) to rea
 ## Installation
 
 ![](https://img.shields.io/badge/IMPORTANT-Still_work_in_progress-cd1628)
+
 ### Installing via HACS
 
 1. **Ensure HACS is Installed**: If you haven't installed HACS yet, follow the [HACS installation guide](https://hacs.xyz/docs/installation/prerequisites).
@@ -67,7 +75,7 @@ A custom integration for [Home Assistant](https://www.home-assistant.io/) to rea
 ### Manual Installation
 
 1. **Download the Repository**:
-   - Clone or download the repository from [GitHub](https://github.com/yourusername/kaco-3-7nx-integration).
+   - Clone or download the repository from [GitHub](https://github.com/RASBR/home-assistant-kaco).
 2. **Copy to Custom Components**:
    - Place the `kaco_3_7nx` folder into the `custom_components` directory of your Home Assistant configuration.
 3. **Restart Home Assistant**:
