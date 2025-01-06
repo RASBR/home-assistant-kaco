@@ -62,6 +62,9 @@ This integration was inspired by [Kolja Windeler's Kaco integeration](https://gi
 
 ### Installing via HACS
 
+_note "Getting this into HACS is still Work-In-Progress"_
+
+```
 1. **Ensure HACS is Installed**: If you haven't installed HACS yet, follow the [HACS installation guide](https://hacs.xyz/docs/installation/prerequisites).
 2. **Add Repository**:
    - Navigate to **HACS** in Home Assistant.
@@ -71,15 +74,18 @@ This integration was inspired by [Kolja Windeler's Kaco integeration](https://gi
 3. **Install the Integration**:
    - Click **Install**.
    - After installation, restart Home Assistant to apply changes.
+```
 
 ### Manual Installation
 
 1. **Download the Repository**:
    - Clone or download the repository from [GitHub](https://github.com/RASBR/home-assistant-kaco).
 2. **Copy to Custom Components**:
-   - Place the `kaco_3_7nx` folder into the `custom_components` directory of your Home Assistant configuration.
+   - Place the `kaco_` folder into the `custom_components` directory of your Home Assistant configuration.
 3. **Restart Home Assistant**:
    - Restart Home Assistant to recognize the new integration.
+4. **Add the integration**:
+   - Add the integration and follow the setup wizard.
 
 ## Configuration
 
