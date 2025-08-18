@@ -1,12 +1,13 @@
 ![](https://img.shields.io/badge/Project_stage-Work_in_progress-orange)
 
-## This is my first trial of HA integration, so the HACS install instructions below are not working or might not work!
+## This is the first custom component I make for Home Assistant. So I appreciate any feedback, assistance, or imrpovements.
 
 <p align="center">
   <img src="custom_components/kaco/static/kaco_new_energy_1.png" alt="Kaco New Energy Logo" width="300"/>
 </p>
 
-# Kaco 3.7NX Inverter Integration for Home Assistant
+# Kaco Inverter Integration for Home Assistant
+
 
 [![Made with ChatGPT](https://img.shields.io/badge/Made%20with-ChatGPT-00ADEF?logo=openai&logoColor=white&style=flat)](https://openai.com/chatgpt)
 ![License](https://img.shields.io/github/license/RASBR/home-assistant-kaco)
@@ -20,14 +21,18 @@ A custom integration for [Home Assistant](https://www.home-assistant.io/) to rea
 
 This integration was inspired by [Kolja Windeler's Kaco integeration](https://github.com/KoljaWindeler/kaco).
 
+
+## Supported models: 
+My inverters models are 3.7NX but I think this will work with other models, at least partially, i.e. 'NH3'
+
 ## Table of Contents
 
-- [Kaco 3.7NX Inverter Integration for Home Assistant](#kaco-37nx-inverter-integration-for-home-assistant)
+- [Kaco Inverter Integration for Home Assistant](#kaco-inverter-integration-for-home-assistant)
+  - [Supported models:](#supported-models)
   - [Table of Contents](#table-of-contents)
   - [Features:](#features)
   - [Requirements](#requirements)
   - [Installation](#installation)
-    - [Installing via HACS](#installing-via-hacs)
     - [Manual Installation](#manual-installation)
   - [Configuration](#configuration)
     - [Setup Steps](#setup-steps)
@@ -40,6 +45,7 @@ This integration was inspired by [Kolja Windeler's Kaco integeration](https://gi
   - [External Links](#external-links)
   - [Troubleshooting](#troubleshooting)
   - [Contributing](#contributing)
+  - [Enhancements on 18 AUG 2025](#enhancements-on-18-aug-2025)
 
 ## Features:
 
@@ -48,40 +54,23 @@ This integration was inspired by [Kolja Windeler's Kaco integeration](https://gi
 - **Real-Time Monitoring**: Track the performance and status of your Kaco 3.7NX inverter.
 - **Multiple Inverters Support**: Easily integrate and monitor multiple inverters.
 - **Network Integration**: Combine with other networked devices like Unifi Network for enhanced functionality.
-- **User-Friendly Setup**: Simple installation and configuration process via HACS.
+- **User-Friendly Setup**: Simple installation and configuration process.
 
 ## Requirements
 
 - **Home Assistant Core**: Version 2023.9 or higher.
-- **HACS**: Home Assistant Community Store must be installed.
-- **Kaco 3.7NX Inverter**: Connected to the same network as Home Assistant.
+- **Kaco Inverter**: Connected to the same network as Home Assistant.
 
 ## Installation
 
 ![](https://img.shields.io/badge/IMPORTANT-Still_work_in_progress-cd1628)
-
-### Installing via HACS
-
-_note "Getting this into HACS is still Work-In-Progress"_
-
-```
-1. **Ensure HACS is Installed**: If you haven't installed HACS yet, follow the [HACS installation guide](https://hacs.xyz/docs/installation/prerequisites).
-2. **Add Repository**:
-   - Navigate to **HACS** in Home Assistant.
-   - Click on **Integrations**.
-   - Click the **+** button in the bottom right corner.
-   - Search for "Kaco 3.7NX" and select it.
-3. **Install the Integration**:
-   - Click **Install**.
-   - After installation, restart Home Assistant to apply changes.
-```
 
 ### Manual Installation
 
 1. **Download the Repository**:
    - Clone or download the repository from [GitHub](https://github.com/RASBR/home-assistant-kaco).
 2. **Copy to Custom Components**:
-   - Place the `kaco_` folder into the `custom_components` directory of your Home Assistant configuration.
+   - Place the `kaco` folder into the `custom_components` directory of your Home Assistant configuration.
 3. **Restart Home Assistant**:
    - Restart Home Assistant to recognize the new integration.
 4. **Add the integration**:
@@ -166,3 +155,10 @@ Contributions are welcome! Whether it's reporting issues, suggesting features, o
    ```bash
    git checkout -b feature/YourFeature
    ```
+
+## Enhancements on 18 AUG 2025
+- Added state_class to entities.
+- Added some stat entities.
+- Add reconfigure option for existing devices
+- Added model field to be entered manually and shows on the device page.
+

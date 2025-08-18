@@ -7,6 +7,7 @@
         "data": {
           "name": "Name",
           "serial_number": "Serial Number",
+          "model": "Model",
           "mac_address": "MAC Address",
           "ip_address": "IP Address",
           "port": "Port",
@@ -15,6 +16,64 @@
         "description_placeholders": {
           "name_hint": "If left empty will default to Kaco + Serial Number",
           "serial_hint": "Serial number should look like 3.7NX15620745",
+          "model_hint": "Enter the inverter model (e.g., 3.7NX, 5.0NX, 8.8NX)",
+          "mac_hint": "Optional. Used to identify device with network integration",
+          "ip_hint": "Example: 192.168.10.52. Use a static IP",
+          "port_hint": "Default: 8484. Port of the device API",
+          "time_hint": "Seconds between updates"
+        },
+        "errors": {
+          "cannot_connect": "Cannot connect to the inverter."
+        }
+      },
+      "reconfigure": {
+        "title": "Reconfigure Kaco Inverter",
+        "description": "Update the connection details and settings.",
+        "data": {
+          "name": "Name",
+          "serial_number": "Serial Number",
+          "model": "Model",
+          "mac_address": "MAC Address",
+          "ip_address": "IP Address",
+          "port": "Port",
+          "time": "Update Interval (seconds)"
+        },
+        "description_placeholders": {
+          "name_hint": "If left empty will default to Kaco + Serial Number",
+          "serial_hint": "Serial number should look like 3.7NX15620745",
+          "model_hint": "Enter the inverter model (e.g., 3.7NX, 5.0NX, 8.8NX)",
+          "mac_hint": "Optional. Used to identify device with network integration",
+          "ip_hint": "Example: 192.168.10.52. Use a static IP",
+          "port_hint": "Default: 8484. Port of the device API",
+          "time_hint": "Seconds between updates"
+        },
+        "errors": {
+          "cannot_connect": "Cannot connect to the inverter."
+        }
+      }
+    },
+    "abort": {
+      "reconfigure_successful": "Configuration updated successfully."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Configure Kaco Inverter Options",
+        "description": "Update the inverter settings.",
+        "data": {
+          "name": "Name",
+          "serial_number": "Serial Number",
+          "model": "Model",
+          "mac_address": "MAC Address",
+          "ip_address": "IP Address",
+          "port": "Port",
+          "time": "Update Interval (seconds)"
+        },
+        "description_placeholders": {
+          "name_hint": "If left empty will default to Kaco + Serial Number",
+          "serial_hint": "Serial number should look like 3.7NX15620745",
+          "model_hint": "Enter the inverter model (e.g., 3.7NX, 5.0NX, 8.8NX)",
           "mac_hint": "Optional. Used to identify device with network integration",
           "ip_hint": "Example: 192.168.10.52. Use a static IP",
           "port_hint": "Default: 8484. Port of the device API",
