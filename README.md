@@ -34,6 +34,7 @@ My inverters models are 3.7NX but I think this will work with other models, at l
   - [Requirements](#requirements)
   - [Installation](#installation)
     - [Manual Installation](#manual-installation)
+    - [Update method:](#update-method)
   - [Configuration](#configuration)
     - [Setup Steps](#setup-steps)
       - [Steps to Add the Integration](#steps-to-add-the-integration)
@@ -75,6 +76,13 @@ My inverters models are 3.7NX but I think this will work with other models, at l
    - Restart Home Assistant to recognize the new integration.
 4. **Add the integration**:
    - Add the integration and follow the setup wizard.
+
+### Update method:
+
+1. Delete all the content of the kaco folder inside the custom_components folder (make sure to delete the '__pycache__' folder too).
+2. Copy the content of the custom_components/kaco/ folder in place of the deleted files.
+3. Restart Home Assistant
+4. Reload the integration for existing devices.
 
 ## Configuration
 
