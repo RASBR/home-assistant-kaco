@@ -29,6 +29,9 @@ SENSORS = [
     {"key": "pac_stat", "name": "Power (stat)", "unit": "W", "device_class": "power", "state_class": "measurement", "factor": 1, "source_key": "pac", "entity_category": "diagnostic"},
     {"key": "etd_stat", "name": "Energy Today (stat)", "unit": "kWh", "device_class": "energy", "state_class": "total_increasing", "factor": 0.1, "source_key": "etd", "entity_category": "diagnostic"},
 
+    # Connection status sensor
+    {"key": "connection_status", "name": "Connection Status", "unit": None, "device_class": None, "state_class": None, "factor": 1, "entity_category": "diagnostic"},
+
     # IP Address entity moved to Diagnostics by setting entity_category.
     {"key": "ip_address", "name": "IP Address", "unit": None, "device_class": None, "state_class": None, "factor": 1, "default_disabled": False},
 ]
@@ -108,6 +111,9 @@ class KacoSensor(CoordinatorEntity, SensorEntity):
         self._serial_number = serial_number
         self._model = model
         self._update_interval = update_interval
+        
+        # Store last known state for persistence
+        self._last_known_state = None
 
         # Set modern Home Assistant attributes
         if self._unit is not None:
@@ -142,7 +148,11 @@ class KacoSensor(CoordinatorEntity, SensorEntity):
     @property
     def available(self):
         """Return True if entity is available."""
-        return self.coordinator.last_update_success
+        # Connection status sensor shows actual availability
+        if self._key == "connection_status":
+            return True  # Always available to show online/offline status
+        # All other sensors remain available with last known values
+        return True
 
     @property
     def name(self):
@@ -150,6 +160,9 @@ class KacoSensor(CoordinatorEntity, SensorEntity):
 
     @property
     def state(self):
+        if self._key == "connection_status":
+            return "Online" if self.coordinator.last_update_success else "Offline"
+            
         if self._key == "ip_address":
             return self.coordinator.url.split("//")[1].split(":")[0]
 
@@ -161,10 +174,14 @@ class KacoSensor(CoordinatorEntity, SensorEntity):
             
         if raw_value is not None:
             try:
-                return round(float(raw_value) * self._factor, 2)
+                current_state = round(float(raw_value) * self._factor, 2)
+                self._last_known_state = current_state  # Store as last known
+                return current_state
             except (ValueError, TypeError):
-                return None
-        return None
+                return self._last_known_state  # Return last known on error
+        
+        # Return last known state if no current data available
+        return self._last_known_state
 
     @property
     def extra_state_attributes(self):

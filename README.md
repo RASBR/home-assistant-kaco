@@ -46,6 +46,8 @@ My inverters models are 3.7NX but I think this will work with other models, at l
   - [External Links](#external-links)
   - [Troubleshooting](#troubleshooting)
   - [Contributing](#contributing)
+  - [Enhancements on 20 AUG 2025](#enhancements-on-20-aug-2025)
+    - [Benefits:](#benefits)
   - [Enhancements on 18 AUG 2025](#enhancements-on-18-aug-2025)
 
 ## Features:
@@ -163,6 +165,29 @@ Contributions are welcome! Whether it's reporting issues, suggesting features, o
    ```bash
    git checkout -b feature/YourFeature
    ```
+
+## Enhancements on 20 AUG 2025
+* Added a connection status sensor to the SENSORS list that will show "Online" or "Offline"
+
+* Added persistence storage by adding self._last_known_state = None in the constructor
+
+* Modified the available property to:
+  * Always return True for the connection status sensor (so it can show offline status)
+  * Always return True for all other sensors (so they stay available with last known values)
+
+* Enhanced the state property to:
+  * Handle the connection status sensor specially (returns "Online"/"Offline")
+  Store successful readings as _last_known_state
+  * Return the last known state when current data is unavailable
+
+### Benefits:
+* Simple implementation: Minimal code changes with clear logic
+Clear status indication: The "Connection Status" sensor will show "Online" or "Offline"
+* Data persistence: All other sensors will keep their last known values when the inverter goes offline
+* No breaking changes: Existing functionality is preserved, just enhanced
+Diagnostic category: The connection status sensor is placed in the diagnostic category alongside other status information
+* Users will now be able to see both the connection status and maintain access to their energy data for dashboards and automations even when the inverter is offline (typically at night).
+
 
 ## Enhancements on 18 AUG 2025
 - Added state_class to entities.
