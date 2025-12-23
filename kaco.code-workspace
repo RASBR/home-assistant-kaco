@@ -1,0 +1,15 @@
+{
+  "folders": [
+    { "path": ".", "name": "Kaco (ACTIVE)" },
+    {
+      "path": "../Autobayt",
+      "name": "Autobayt (REFERENCE)",
+      "settings": { "files.readonlyInclude": ["**/*"] }
+    },
+    {
+      "path": "../Gobzigh",
+      "name": "Gobzigh (REFERENCE)",
+      "settings": { "files.readonlyInclude": ["**/*"] }
+    }
+  ]
+}
